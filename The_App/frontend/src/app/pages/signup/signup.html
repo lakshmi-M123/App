@@ -1,0 +1,26 @@
+<div class="login-container">
+  <div class="login-box">
+    <h2>Create Account 📝</h2>
+    <p class="subtitle">Join the platform today</p>
+
+    <form (ngSubmit)="onSubmit()">
+      <label>Username</label>
+      <input [(ngModel)]="username" name="username" placeholder="Choose a username" />
+
+      <label>Email</label>
+      <input [(ngModel)]="email" name="email" placeholder="Enter your email" />
+
+      <label>Password</label>
+      <input [(ngModel)]="password" name="password" type="password" placeholder="Create a password" />
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p class="error" *ngIf="error">{{ error }}</p>
+
+    <p class="signup">
+      Already have an account?
+      <button type="button" (click)="goToSignin()">Login</button>
+    </p>
+  </div>
+</div>
